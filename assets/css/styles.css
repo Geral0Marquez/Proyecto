@@ -327,7 +327,7 @@ input {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color: black;
 }
 
 /*=============== NAV ===============*/
@@ -413,7 +413,7 @@ input {
 /* Active link */
 .active-link {
   position: relative;
-  color: white;
+  color:black;
 }
 
 .active-link::before {
@@ -1169,7 +1169,7 @@ input {
     color:white;
   }
   .scroll-header .active-link::before {
-    background-color: white;
+    background-color: rgb(8, 8, 8);
   }
   .scroll-header .change-theme {
     color: white;
