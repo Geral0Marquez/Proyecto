@@ -221,7 +221,7 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
+  font-family: Balsamiq;
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
@@ -230,7 +230,7 @@ body {
 h1, h2, h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  font-family: var(--title-font);
+  font-family: Bayon;
 }
 
 ul {
@@ -401,19 +401,19 @@ input {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
+  background-color: black;
   box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
 
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
-  color: var(--title-color);
+  color: white;
 }
 
 /* Active link */
 .active-link {
   position: relative;
-  color: var(--title-color);
+  color: white;
 }
 
 .active-link::before {
@@ -1133,11 +1133,11 @@ input {
     height: calc(var(--header-height) + 1.5rem);
   }
   .nav__link {
-    color: var(--white-color);
+    color: white;
     text-transform: initial;
   }
   .nav__link:hover {
-    color: var(--white-color);
+    color: white;
   }
   .nav__dark {
     position: initial;
@@ -1163,16 +1163,16 @@ input {
     background-color: var(--white-color);
   }
   .scroll-header .nav__link {
-    color: var(--text-color);
+    color: white;
   }
   .scroll-header .active-link {
-    color: var(--title-color);
+    color:white;
   }
   .scroll-header .active-link::before {
-    background-color: var(--title-color);
+    background-color: white;
   }
   .scroll-header .change-theme {
-    color: var(--text-color);
+    color: white;
   }
   .section {
     padding: 7rem 0 2rem;
