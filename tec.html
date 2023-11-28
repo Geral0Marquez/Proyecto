@@ -23,8 +23,7 @@
     <style>
         .card {
             position: relative;
-            width: 100%;
-            height: 350px;
+            height: 500px;
             margin: 20px;
         }
 
@@ -36,16 +35,18 @@
             border-radius: 10px;
             overflow: hidden;
             transition: .5s;
+
         }
 
         .card .front {
-            transform: perspective(600px) rotateY(0deg);
+            transform: perspective(200px) rotateY(0deg);
             box-shadow: 0 5px 10px #000;
         }
 
         .card .front img {
             position: absolute;
             width: 100%;
+            max-width: 100vw;
             height: 100%;
             object-fit: cover;
         }
@@ -62,7 +63,7 @@
         }
 
         .card .back {
-            transform: perspective(600px) rotateY(180deg);
+            transform: perspective(200px) rotateY(180deg);
             background: rgb(3, 35, 54);
             padding: 15px;
             color: #f3f3f3;
@@ -71,6 +72,7 @@
             justify-content: space-between;
             text-align: center;
             box-shadow: 0 5px 10px #000;
+
         }
 
         .card .back .link {
@@ -108,7 +110,7 @@
 
         }
 
-
+  
 
         @media (min-width: 768px) {
 
@@ -148,19 +150,188 @@
             }
 
             .card {
-                width: 100%;
+                width: 649px;
             }
 
         }
 
 
-        @media (min-width: 100px) and (max-width: 768px) {
-
+        @media (min-width: 658px) and (max-width: 768px) {
 
 
             .card {
-                width: auto;
+                width: 548px;
             }
+
+
+        }
+
+        @media (min-width: 100px) and (max-width: 4000000px) {
+
+
+            .buttons button {
+                display: none;
+            }
+
+
+        }
+
+
+
+        @media (min-width: 630px) and (max-width: 658px) {
+
+
+            .card {
+                width: 545px;
+            }
+
+            .slider {
+                width: 580px !important;
+            }
+
+
+        }
+
+
+        @media (min-width: 603px) and (max-width: 630px) {
+
+
+            .card {
+                width: 510px;
+            }
+
+            .slider {
+                width: 550px !important;
+            }
+
+
+        }
+
+
+        @media (min-width: 570px) and (max-width: 603px) {
+
+
+            .card {
+                width: 480px;
+            }
+
+            .slider {
+                width: 530px !important;
+            }
+
+
+        }
+
+
+
+        @media (min-width: 527px) and (max-width: 570px) {
+
+
+            .card {
+                width: 450px;
+            }
+
+            .slider {
+                width: 480px !important;
+            }
+
+
+        }
+
+
+
+        @media (min-width: 499px) and (max-width: 527px) {
+
+
+            .card {
+                width: 400px;
+            }
+
+            .slider {
+                width: 450px !important;
+            }
+
+
+        }
+
+
+        @media (min-width: 447px) and (max-width: 499px) {
+
+
+            .card {
+                width: 350px;
+
+            }
+
+            .slider {
+                width: 400px !important;
+            }
+
+
+        }
+
+
+        @media (min-width: 396px) and (max-width: 447px) {
+
+
+            .card {
+                width: 320px;
+
+            }
+
+            .slider {
+                width: 350px !important;
+            }
+
+
+        }
+
+
+
+        @media (min-width: 370px) and (max-width: 396px) {
+
+
+            .card {
+                width: 300px;
+
+            }
+
+            .slider {
+                width: 320px !important;
+            }
+
+
+        }
+
+
+        @media (min-width: 331px) and (max-width: 370px) {
+
+
+            .card {
+                width: 250px;
+
+            }
+
+            .slider {
+                width: 280px !important;
+            }
+
+
+        }
+
+        @media (min-width: 200px) and (max-width: 331px) {
+
+
+            .card {
+                width: 200px;
+
+            }
+
+            .slider {
+                width: 240px !important;
+            }
+
+
         }
 
         @media (min-width: 376px) and (max-width: 532px) {
@@ -539,6 +710,91 @@
             /* Eliminar espacio adicional debajo de las imágenes */
             margin: 0 10px;
         }
+
+        .slider {
+            width: 670px;
+            max-width: 100vw;
+            height: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+
+
+        }
+
+        .list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            width: max-content;
+            transition: 1s;
+        }
+
+
+        .list img {
+            width: 800px;
+            max-width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff5;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+        }
+
+
+        .dots {
+            position: absolute;
+            bottom: 10px;
+            color: #fff;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .dots li {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(15, 15, 15);
+            margin: 20px;
+            border-radius: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+
+        .dots li.active {
+            width: 30px;
+        }
+
+        .buttons button:hover,
+        .dots li:hover {
+            background-color: rgb(239, 235, 235);
+            color: black;
+            /* Cambiar el color del texto si es necesario */
+        }
     </style>
 </head>
 
@@ -647,7 +903,8 @@
                                 <p class="about__description" style="text-align:justify;">
 
                                 <h2 class="por title">Texel Density</h2>
-                                <p  class=" delaySmall"style="text-align:justify;"> ¿Te has preguntado por qué algunos juegos se ven
+                                <p class=" delaySmall" style="text-align:justify;"> ¿Te has preguntado por qué algunos
+                                    juegos se ven
                                     increíbles, con texturas súper detalladas, mientras que otros parecen pixelados
                                     o borrosos? Bueno, gran parte de la respuesta está en lo que se conoce como
                                     Texel Density y te volvera de oro si lo comprendes.
@@ -699,7 +956,8 @@
                                 <p class="about__description" style="text-align:justify;">
 
                                 <h2 class="por title">Texturing</h2>
-                                <p class="delaySmall" style="text-align:justify;"> Para este paso suelo emplear Adobe substance painter
+                                <p class="delaySmall" style="text-align:justify;"> Para este paso suelo emplear Adobe
+                                    substance painter
                                     o designer y antes de iniciar el proceso de texturización, es crucial determinar
                                     la plataforma a la que deseamos dirigir nuestros activos. En esta guía, me
                                     enfocare en el uso del motor de videojuegos Unreal Engine, por lo que el flujo
@@ -746,162 +1004,194 @@
 
                 <h2 class="por title" style="text-align: center;">Mapas de Texturas en Subtance Painter</h2>
                 <section class="about section" id="about">
-                    <div class="grid-cad">
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Albedo.png" alt="">
-                                <h3>Albedo</h3>
-                            </div>
-                            <div class="face back">
 
-                                <p class="about__description" style="text-align:justify;">El Albedo determina el
-                                    color y
-                                    la apariencia general de la superficie de un objeto en condiciones de
-                                    iluminación
-                                    difusa, sin tener en cuenta los efectos de brillo, sombras o reflejos
-                                    especulares.<br>
-                                    se recomienda mantener el rango de colores oscuros en un intervalo que oscile
-                                    entre
-                                    30 y 50 en los valores RGB, mientras que el color más brillante no debe superar
-                                    los
-                                    240 en la escala RGB.</p>
+                    <div class="slider animar">
+                        <div class="list">
+                            <div class="card item ">
+                                <div class="face front">
+                                    <img src="assets/img/Albedo.png" alt="">
+                                    <h3>Albedo</h3>
+                                </div>
+                                <div class="face back">
 
+                                    <p class="about__description" style="text-align:justify;">El Albedo determina el
+                                        color y
+                                        la apariencia general de la superficie de un objeto en condiciones de
+                                        iluminación
+                                        difusa, sin tener en cuenta los efectos de brillo, sombras o reflejos
+                                        especulares.<br>
+                                        se recomienda mantener el rango de colores oscuros en un intervalo que oscile
+                                        entre
+                                        30 y 50 en los valores RGB, mientras que el color más brillante no debe superar
+                                        los
+                                        240 en la escala RGB.</p>
+
+                                </div>
                             </div>
+                            <div class="card item animar">
+                                <div class="face front">
+                                    <img src="assets/img/Metalic.png" alt="">
+                                    <h3>Metallic</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">El mapa de Metallic indica
+                                        que
+                                        la superficie es más metálica y reflejará la luz de manera similar a un metal.
+                                        Al igual que con la capa Albedo, es importante ajustar los valores de Metallic
+                                        dentro de un rango apropiado para evitar efectos no deseados. Típicamente, los
+                                        valores de Metallic suelen variar entre 0 (no metálico) y 1 (totalmente
+                                        metálico).
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card item">
+                                <div class="face front">
+                                    <img src="assets/img/Roughness.png" alt="">
+                                    <h3>Roughness</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">
+                                        El Roughness indica que la superficie es rugosa y difunde la luz en muchas
+                                        direcciones, lo que resulta en una reflexión suave o difusa.
+                                        Al ajustar la capa Roughness adecuadamente, puedes controlar la apariencia de
+                                        materiales que van desde superficies altamente pulidas, como el vidrio o el
+                                        plástico
+                                        brillante, hasta superficies rugosas como el papel o la madera áspera.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card item ">
+                                <div class="face front">
+                                    <img src="assets/img/Normal.png" alt="">
+                                    <h3>Normal</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">
+                                        El mapa de "Normal" en Substance Painter se utiliza para representar detalles en
+                                        relieve en la superficie de un objeto en un modelo 3D. Se emplea para simular
+                                        sombras, arrugas, rugosidades y otros detalles visuales que afectan la
+                                        apariencia
+                                        tridimensional de un material. Esta capa permite dar textura y profundidad a los
+                                        objetos al modificar cómo interactúan con la luz y cómo se perciben en 3D.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card item">
+                                <div class="face front">
+                                    <img src="assets/img/Ambient Occlusion.png" alt="">
+                                    <h3>Ambient Occlusion</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">
+                                        Este mapa lo utilizaras para simular áreas donde la luz tiende a tener
+                                        dificultades
+                                        para llegar debido a la presencia de interacciones con objetos cercanos. Esto
+                                        crea
+                                        sombras suaves y aumenta el realismo visual al resaltar los detalles y
+                                        hendiduras en
+                                        la superficie del objeto, agregando profundidad y definición a la textura del
+                                        modelo
+                                        3D.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card item">
+                                <div class="face front">
+                                    <img src="assets/img/Height.png" alt="">
+                                    <h3>Height</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">
+                                        Este mapa te permite agregar detalles tridimensionales, como relieve, rugosidad
+                                        y
+                                        bordes a la textura, lo que contribuye a una apariencia más creible y con más
+                                        profundidad en el modelo.<br>
+                                        Dentro de nuestro objetivos puedes usar el Height Map para enfocarte en resaltar
+                                        las
+                                        características más distintivas y estilizadas del objeto.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card item">
+                                <div class="face front">
+                                    <img src="assets/img/Material.png" alt="">
+                                    <h3>Material</h3>
+                                </div>
+                                <div class="face back">
+
+                                    <p class="about__description" style="text-align:justify;">
+                                        Este mapa es el que utilizaras para visualizar un material completo en un objeto
+                                        3D
+                                        en lugar de verlos individualmente como los anteriormente lo repasamos.
+                                        Aqui las propiedades individuales como Albedo, Roughness o Metallic. se asignan
+                                        en
+                                        un conjunto de propiedades de material predefinidas o personalizadas a toda la
+                                        superficie del objeto de una vez.
+                                    </p>
+
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Metalic.png" alt="">
-                                <h3>Metallic</h3>
-                            </div>
-                            <div class="face back">
 
-                                <p class="about__description" style="text-align:justify;">El mapa de Metallic indica
-                                    que
-                                    la superficie es más metálica y reflejará la luz de manera similar a un metal.
-                                    Al igual que con la capa Albedo, es importante ajustar los valores de Metallic
-                                    dentro de un rango apropiado para evitar efectos no deseados. Típicamente, los
-                                    valores de Metallic suelen variar entre 0 (no metálico) y 1 (totalmente
-                                    metálico).
-                                </p>
 
-                            </div>
+                        <!-- button prev and next -->
+                        <div class="buttons">
+                            <button id="prev">
+                                << /button>
+                                    <button id="next">></button>
                         </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Roughness.png" alt="">
-                                <h3>Roughness</h3>
-                            </div>
-                            <div class="face back">
 
-                                <p class="about__description" style="text-align:justify;">
-                                    El Roughness indica que la superficie es rugosa y difunde la luz en muchas
-                                    direcciones, lo que resulta en una reflexión suave o difusa.
-                                    Al ajustar la capa Roughness adecuadamente, puedes controlar la apariencia de
-                                    materiales que van desde superficies altamente pulidas, como el vidrio o el
-                                    plástico
-                                    brillante, hasta superficies rugosas como el papel o la madera áspera.
-                                </p>
+                        <ul class="dots">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
 
-                            </div>
-                        </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Normal.png" alt="">
-                                <h3>Normal</h3>
-                            </div>
-                            <div class="face back">
-
-                                <p class="about__description" style="text-align:justify;">
-                                    El mapa de "Normal" en Substance Painter se utiliza para representar detalles en
-                                    relieve en la superficie de un objeto en un modelo 3D. Se emplea para simular
-                                    sombras, arrugas, rugosidades y otros detalles visuales que afectan la
-                                    apariencia
-                                    tridimensional de un material. Esta capa permite dar textura y profundidad a los
-                                    objetos al modificar cómo interactúan con la luz y cómo se perciben en 3D.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Ambient Occlusion.png" alt="">
-                                <h3>Ambient Occlusion</h3>
-                            </div>
-                            <div class="face back">
-
-                                <p class="about__description" style="text-align:justify;">
-                                    Este mapa lo utilizaras para simular áreas donde la luz tiende a tener
-                                    dificultades
-                                    para llegar debido a la presencia de interacciones con objetos cercanos. Esto
-                                    crea
-                                    sombras suaves y aumenta el realismo visual al resaltar los detalles y
-                                    hendiduras en
-                                    la superficie del objeto, agregando profundidad y definición a la textura del
-                                    modelo
-                                    3D.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Height.png" alt="">
-                                <h3>Height</h3>
-                            </div>
-                            <div class="face back">
-
-                                <p class="about__description" style="text-align:justify;">
-                                    Este mapa te permite agregar detalles tridimensionales, como relieve, rugosidad
-                                    y
-                                    bordes a la textura, lo que contribuye a una apariencia más creible y con más
-                                    profundidad en el modelo.<br>
-                                    Dentro de nuestro objetivos puedes usar el Height Map para enfocarte en resaltar
-                                    las
-                                    características más distintivas y estilizadas del objeto.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="card animar">
-                            <div class="face front">
-                                <img src="assets/img/Material.png" alt="">
-                                <h3>Material</h3>
-                            </div>
-                            <div class="face back">
-
-                                <p class="about__description" style="text-align:justify;">
-                                    Este mapa es el que utilizaras para visualizar un material completo en un objeto
-                                    3D
-                                    en lugar de verlos individualmente como los anteriormente lo repasamos.
-                                    Aqui las propiedades individuales como Albedo, Roughness o Metallic. se asignan
-                                    en
-                                    un conjunto de propiedades de material predefinidas o personalizadas a toda la
-                                    superficie del objeto de una vez.
-                                </p>
-
-                            </div>
-                        </div>
+                        </ul>
                     </div>
 
-                </section>
-                <p class="about__description delaySmall" style="text-align:justify;">Ajustando y combinando creativamente estos
-                    mapas, podemos alcanzar un estilo estilizado único que enfatiza las características deseadas y
-                    simplifica los detalles a nuestra elección. La versatilidad de Substance Painter para experimentar y
-                    personalizar estos mapas nos permite lograr el resultado deseado en nuestro estilo estilizado.</p>
+                    <p class="about__description delaySmall" style="text-align:justify;">Ajustando y combinando
+                        creativamente estos
+                        mapas, podemos alcanzar un estilo estilizado único que enfatiza las características deseadas y
+                        simplifica los detalles a nuestra elección. La versatilidad de Substance Painter para
+                        experimentar y
+                        personalizar estos mapas nos permite lograr el resultado deseado en nuestro estilo estilizado.
+                    </p>
 
-            </section>
-
-
-
-
+        </div>
 
 
-
+        </section>
 
 
 
+        </section>
 
-            </section>
+
+
+
+
+
+
+
+
+
+
+        </section>
 
 
 
@@ -987,7 +1277,57 @@
                 $(this).addClass("active");
             });
         });
+
+        let list = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let dots = document.querySelectorAll('.slider .dots li');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+
+        let active = 0;
+        let lengthItems = items.length - 1;
+
+
+        next.onclick = function () {
+            if (active + 1 > lengthItems) {
+                active = 0;
+            } else {
+                active = active + 1;
+            }
+            reloadSlider();
+        }
+
+        prev.onclick = function () {
+            if (active - 1 < 0) {
+                active = lengthItems;
+            } else {
+                active = active - 1;
+            }
+            reloadSlider();
+        }
+
+        function reloadSlider() {
+            let checkLeft = items[active].offsetLeft;
+            list.style.left = -checkLeft + 'px';
+
+            let lastActiveDot = document.querySelector('.slider .dots li.active');
+            lastActiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+            clearInterval(refreshSlider);
+
+        }
+
+        dots.forEach((Li, key) => {
+
+            Li.addEventListener('click', function () {
+                active = key;
+                reloadSlider();
+            })
+
+        })
+
     </script>
+
 
 
 

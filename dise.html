@@ -107,7 +107,7 @@
         }
 
         .about__img-onep {
-          
+
             /* Ajusta el porcentaje según tu preferencia */
             /* La altura se ajusta automáticamente para mantener las proporciones */
             display: block;
@@ -316,8 +316,102 @@
 
 
 
-        .discover__card  img{
-            height:300px;
+        .discover__card img {
+            height: 300px;
+        }
+
+
+
+
+        .slider {
+            width: 800px;
+            max-width: 100vw;
+            height: 400px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            width: max-content;
+            transition: 1s;
+        }
+
+
+        .list img {
+            width: 800px;
+            max-width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff5;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+        }
+
+
+        .dots {
+            position: absolute;
+            bottom: 10px;
+            color: #fff;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .dots li {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+
+        .dots li.active {
+            width: 30px;
+        }
+
+        .buttons button:hover,
+        .dots li:hover {
+            background-color: black;
+            color: white;
+            /* Cambiar el color del texto si es necesario */
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .slider {
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -421,37 +515,39 @@
 
 
         <!--==================== DISCOVER ====================-->
-     
 
-            <div class="discover__container container swiper-container  delaySmall">
-                <div class="swiper-wrapper">
-                    <!--==================== DISCOVER 1 ====================-->
-                    <div class="discover__card swiper-slide">
-                        <img src="assets/img/slide_1.jpg" alt="" class="discover__img">
-                        
-                    </div>
-
-                    <!--==================== DISCOVER 2 ====================-->
-                    <div class="discover__card swiper-slide">
-                        <img src="assets/img/slide_2.jpg" alt="" class="discover__img">
-                     
-                    </div>
-
-                    <!--==================== DISCOVER 3 ====================-->
-                    <div class="discover__card swiper-slide">
-                        <img src="assets/img/slide_3.png" alt="" class="discover__img">
-                     
-
-
-                    </div>
-
-                    
+        <div class="slider animar">
+            <div class="list">
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_1.png">
+                </div>
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_2.png">
+                </div>
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_3.png">
                 </div>
             </div>
-     
 
 
-        <section class="about section delayLargeTopExtra"  id="about">
+            <!-- button prev and next -->
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+        </div>
+
+
+
+
+        <section class="about section delayLargeTopExtra" id="about">
             <div class="about__container container grid  " style="gap: 50px;">
                 <div class=" about__data animated">
                     <p class="about__description">
@@ -481,10 +577,10 @@
 
 
                 <div class="image-column animar">
-                    <iframe width="100%" height="350px" src="https://www.youtube.com/embed/W3eyNtBYBTk"
-                            frameborder="0" allowfullscreen class="about__img-onea"></iframe>
+                    <iframe width="100%" height="350px" src="https://www.youtube.com/embed/W3eyNtBYBTk" frameborder="0"
+                        allowfullscreen class="about__img-onea"></iframe>
 
-                    
+
                 </div>
             </div>
 
@@ -492,7 +588,7 @@
 
 
         </section>
-        
+
         <div class="about__container container grid   " style="gap: 50px;">
             <div class="image-columns animar">
                 <br>
@@ -504,7 +600,8 @@
                 <h2 class="por  animar">Proxy Phase</h2>
 
 
-                <p  class="delaySmall"style="text-align: justify; margin-bottom: 5%;  ">En esta etapa del desarrollo de escenarios
+                <p class="delaySmall" style="text-align: justify; margin-bottom: 5%;  ">En esta etapa del desarrollo de
+                    escenarios
                     estilizados, Te debes enfocar
                     en la creación de las formas básicas del escenario, especialmente en lo que respecta a elementos
                     modulares. Durante esta fase, trabajaras en la concepción de modelos proxy que servirán como
@@ -530,7 +627,8 @@
                 <p class="about__description">
 
                     <br>
-                <p class="delaySmall" style="text-align: justify; margin-bottom: 10%;"> Es fundamental comprender que en esta etapa,
+                <p class="delaySmall" style="text-align: justify; margin-bottom: 10%;"> Es fundamental comprender que en
+                    esta etapa,
                     estarás creando
                     representaciones simplificadas de los elementos del escenario, caracterizadas por su menor nivel de
                     detalle y menor cantidad de polígonos en comparación con las versiones finales. Estos modelos
@@ -658,11 +756,11 @@
             });
         });
 
-        
+
 
     </script>
 
-    
+
     <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line scrollup__icon"></i>
@@ -737,6 +835,57 @@
                 $(this).addClass("active");
             });
         });
+
+        let list = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let dots = document.querySelectorAll('.slider .dots li');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+
+        let active = 0;
+        let lengthItems = items.length - 1;
+
+
+        next.onclick = function () {
+            if (active + 1 > lengthItems) {
+                active = 0;
+            } else {
+                active = active + 1;
+            }
+            reloadSlider();
+        }
+
+        prev.onclick = function () {
+            if (active - 1 < 0) {
+                active = lengthItems;
+            } else {
+                active = active - 1;
+            }
+            reloadSlider();
+        }
+
+        let refreshSlider = setInterval(() => { next.click() }, 5000);
+        function reloadSlider() {
+            let checkLeft = items[active].offsetLeft;
+            list.style.left = -checkLeft + 'px';
+
+            let lastActiveDot = document.querySelector('.slider .dots li.active');
+            lastActiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+            clearInterval(refreshSlider);
+            refreshSlider = setInterval(() => { next.click() }, 5000);
+        }
+
+        dots.forEach((Li, key) => {
+
+            Li.addEventListener('click', function () {
+                active = key;
+                reloadSlider();
+            })
+
+        })
+
+
     </script>
 
 
