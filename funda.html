@@ -15,7 +15,18 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+
     <!-- En el head de tu HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Otros elementos head... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-Q56eRrybXMm3bAv/n43lwcKJAJznszg7hoUpQC3I2QANBXfOp3T1tNxV7Go8NTaIJJpeG0kpiY48vRTO0C7Q9A=="
+        crossorigin="anonymous" />
+
+
 
 
 
@@ -40,6 +51,8 @@
             color: #ff6600;
             /* Puedes ajustar el color del texto según tus necesidades */
         }
+
+
 
         .two-column-container {
             display: flex;
@@ -159,14 +172,14 @@
 
         }
 
-       
 
-        @media screen and (min-width:  908px) and (max-width:20000px) {
+
+        @media screen and (min-width: 908px) and (max-width:20000px) {
             .grid-containerf {
-              gap: 40px;
+                gap: 40px;
             }
-            
-            }
+
+        }
 
 
         /* Agrega estos estilos para centrar la imagen y limitar su ancho */
@@ -370,9 +383,11 @@
 
         .details {
             position: absolute;
-            top: 10px;
-            left: 40px;
+            top: 60px;
+            left: 50px;
         }
+
+
 
         .details h2 {
             font-family: "Jost", sans-serif;
@@ -739,13 +754,348 @@
         }
 
         @media(min-width: 100px) and (max-width: 479px) {
-            .slider-container, .orale {
+
+            .slider-container,
+            .orale {
                 display: none;
             }
 
 
 
 
+        }
+
+        @media(min-width: 1600px) and (max-width: 100000000px) {
+            .section {
+                padding: 0px 0px 0px;
+            }
+
+
+
+
+        }
+
+
+        footer {
+            position: relative;
+            width: 100%;
+            background: black;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social_icon,
+        footer .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        footer .social_icon li,
+        footer .menu li {
+            list-style: none;
+        }
+
+        footer .social_icon li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        footer .social_icon li a {
+            transform: translateY(-10px);
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+
+            opacity: 1;
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+
+
+
+        footer .wave#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animatewave 3s linear infinite;
+        }
+
+
+
+        .loco {
+
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* 5 columnas con tamaño igual */
+            gap: 5px;
+            /* Espacio entre las tarjetas */
+        }
+
+        .card {
+            height: 150px;
+            width: 99px;
+            margin: 10px;
+            transition: 300ms;
+        }
+
+        .personaje,
+        .personaje_2,
+        .personaje_3 {
+            height: 250px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10%;
+            background-color: #00a5ec;
+            transition: 300ms;
+            position: absolute;
+        }
+
+        .imagen_personaje {
+            height: 350px;
+            width: 200px;
+            background-image: url(assets/img/vegeta_V2.png);
+            background-size: cover;
+            margin-bottom: 200px;
+            transition: 300ms;
+            filter: drop-shadow(5px -4px 10px #000);
+        }
+
+        .imagen_personaje_2 {
+            height: 350px;
+            width: 250px;
+            background-image: url(assets/img/GOKU.png);
+            background-size: cover;
+            margin-bottom: 200px;
+            transition: 300ms;
+            filter: drop-shadow(5px -4px 10px #000);
+        }
+
+        .imagen_personaje_3 {
+            height: 350px;
+            width: 200px;
+            background-image: url(assets/img/gohan_v1.png);
+            background-size: cover;
+            margin-bottom: 200px;
+            transition: 300ms;
+            filter: drop-shadow(5px -4px 10px #000);
+        }
+
+        .detalle,
+        .detalle_2,
+        .detalle_3 {
+            height: 98px;
+            width: 200px;
+            background-color: rgb(16, 15, 15);
+            position: absolute;
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+            margin-top: 150px;
+            z-index: 2;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            transition: 300ms;
+        }
+
+
+        /* hover */
+
+
+
+        .card:hover .imagen_personaje {
+            transform: translatey(-40px);
+            transition: 300ms;
+            filter: none;
+            background-image: url(assets/img/vegeta.png);
+        }
+
+        .card:hover .imagen_personaje_2 {
+            transform: translatey(-40px);
+            transition: 300ms;
+            filter: none;
+            background-image: url(assets/img/GOKU_V2.png);
+        }
+
+        .card:hover .imagen_personaje_3 {
+            transform: translatey(-40px);
+            transition: 300ms;
+            filter: none;
+            background-image: url(assets/img/gohan.png);
+        }
+
+        .card:hover .personaje {
+            background-image: radial-gradient(white, rgb(255, 0, 221));
+        }
+
+        .card:hover .personaje_2 {
+            background-image: radial-gradient(white, rgb(68, 68, 68));
+        }
+
+        .card:hover .personaje_3 {
+            background-image: radial-gradient(white, rgb(255, 0, 0));
+        }
+
+        /* texto y bottun */
+
+        .loco h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loco p {
+            margin: auto;
+            width: 90%;
+            font-size: 12px;
+        }
+
+        /* Añade un estilo específico para la tarjeta activa */
+        .card.capitulo-1,
+        .card.capitulo-2,
+        .card.capitulo-3,
+        .card.capitulo-4,
+        .card.capitulo-5 {
+            background-image: radial-gradient(white, rgb(255, 0, 221));
+            /* Cambia el color según tus necesidades */
+        }
+
+        /* Resto del código sin cambios */
+
+        /* hover */
+        /* ... */
+
+        /* texto y boton */
+        /* ... */
+
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 
@@ -756,10 +1106,12 @@
 
 
     <main class="main">
+        <button id="scrollToTopBtn" title="Volver arriba"><a style="color: white;" href="index.html"><i
+                    class="ri-home-2-line"></i></a></button>
 
         <h1 class=" fundamentos-title title">FUNDAMENTOS DEL ARTE ESTILIZADO <br> </h1>
         <!--==================== ABOUT ====================-->
-        <section class="about section" id="about" >
+        <section class="about section" id="about">
 
 
 
@@ -787,7 +1139,12 @@
 
                 <div class="img-a delayMedium">
                     <div class="about__img-overlay gusa">
-                        <img src="assets/img/simon-fuchs-toronto-01.jpg" alt="" class="about__img-one"><br><br>
+
+                        <img src="assets/img/simon-fuchs-toronto-01.jpg"
+                            onclick="openModal('assets/img/simon-fuchs-toronto-01.jpg')" alt=""
+                            class="about__img-one"><br><br>
+
+
                         <p class="about__description animar" style="text-align: center; text-decoration: underline;">
                             <a href="https://www.artstation.com/artwork/8lKGPn" target="_blank">Artstation-overwatch 2,
                                 Toronto</a>
@@ -796,7 +1153,11 @@
 
                 </div>
             </div>
-
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
 
 
             <div class="about__container container space ">
@@ -839,53 +1200,63 @@
 
         </section>
 
-        <section class="about orale section  delaySmall" id="about" style="margin-top: 100px;">
+        <div class="about orale section  delaySmall" id="about" style="margin-top: 100px;">
             <section class="slider-container ">
                 <div class="slider-images ">
                     <div class="slider-img  swiper-slide " style="opacity: 0.9;">
                         <img src="assets/img/1_Cartoon.jpg" alt="1" />
                         <h1 style="font-size: 16px;">Cartoon</h1>
                         <div class="details">
-                            <h2>Cartoon</h2>
-                            <p>El escenario debe ser coherente con la historia del juego, es decir, un escenario para un
-                                juego de acción ambientado en un mundo postapocalíptico debería ser oscuro y desolado,
-                                mientras que un escenario para un juego de aventuras ambientado en un mundo de fantasía
-                                debería ser colorido y vibrante.</p>
+                            <h2 style="text-align: center !important;">Cartoon</h2>
+                            <p>EL ESCENARIO DEBE SER COHERENTE CON LA HISTORIA DEL JUEGO, ES DECIR, UN ESCENARIO PARA UN
+                                JUEGO DE ACCIÓN AMBIENTADO EN UN MUNDO POSTAPOCALÍPTICO DEBERÍA SER OSCURO Y DESOLADO,
+                                MIENTRAS QUE UN ESCENARIO PARA UN JUEGO DE AVENTURAS AMBIENTADO EN UN MUNDO DE FANTASÍA
+                                DEBERÍA SER COLORIDO Y VIBRANTE.
+
+                            </p>
+
                         </div>
                     </div>
                     <div class="slider-img  swiper-slide" style="opacity: 0.9;">
                         <img src="assets/img/1_Comicñ.jpg" alt="2" />
                         <h1>Cómics</h1>
                         <div class="details">
-                            <h2>Cómics</h2>
-                            <p>Suele tomar inspiración de las historietas tradicionales. Usa tonos grises o colores muy
-                                fuertes. Y en muchos casos, tiene trazos gruesos y personajes con formas simples.
-                                Algunos ejemplos incluyen "Spider-Man: Shattered Dimensions", "Batman: Arkham Asylum" y
-                                "The Wolf Among Us".</p>
+                            <h2 style="text-align: center;">Cómics</h2>
+                            <p>SUELE TOMAR INSPIRACIÓN DE LAS HISTORIETAS TRADICIONALES. USA TONOS GRISES O COLORES MUY
+                                FUERTES. Y EN MUCHOS CASOS, TIENE TRAZOS GRUESOS Y PERSONAJES CON FORMAS SIMPLES.
+                                ALGUNOS EJEMPLOS INCLUYEN "SPIDER-MAN: SHATTERED DIMENSIONS", "BATMAN: ARKHAM ASYLUM" Y
+                                "THE WOLF AMONG US".</p>
+
                         </div>
                     </div>
                     <div class="slider-img  swiper-slide">
                         <img src="assets/img/1_RealistaSimplificado.jpg" alt="3" />
                         <h1>Realista</h1>
                         <div class="details">
-                            <h2>Realista simplificado</h2>
-                            <p>Este estilo intenta recurrir a un estilo más realista, pero simplificado. Es un estilo
-                                interesante, ya que mantiene detalles realistas como sombras y luz, pero con figuras más
-                                simples, "Grand Theft Auto V", "Uncharted 3" y "Bioshock " sirven como buenos ejemplos
-                                del estilo de arte realista simplificado. Todos estos juegos tienen una apariencia
-                                simple pero con un nivel de detalle visual notable.</p>
+                            <h2 style="text-align: center;">Realista simplificado</h2>
+                            <p>ESTE ESTILO INTENTA RECURRIR A UN ESTILO MÁS REALISTA, PERO SIMPLIFICADO. ES UN ESTILO
+                                INTERESANTE, YA QUE MANTIENE DETALLES REALISTAS COMO SOMBRAS Y LUZ, PERO CON FIGURAS MÁS
+                                SIMPLES, "GRAND THEFT AUTO V", "UNCHARTED 3" Y "BIOSHOCK " SIRVEN COMO BUENOS EJEMPLOS
+                                DEL ESTILO DE ARTE REALISTA SIMPLIFICADO. TODOS ESTOS JUEGOS TIENEN UNA APARIENCIA
+                                SIMPLE PERO CON UN NIVEL DE DETALLE VISUAL NOTABLE.
+
+                            </p>
+
                         </div>
                     </div>
-                    <div class="slider-img active">
+                    <div class="slider-img active ">
                         <img src="assets/img/1_Celshading.jpg" alt="4" />
                         <h1>Cel shaded</h1>
                         <div class="details">
-                            <h2>Cel shaded</h2>
-                            <p>Aplica efectos específicos que se parecen a los trazos del dibujo tradicional. El efecto
-                                cel shaded es muy reconocible porque las sombras son celulares y reducen el detalle a la
-                                vez que añaden personalidad. Un gran ejemplo es el juego "The Legend of Zelda: The Wind
-                                Waker" en GameCube, que popularizó este estilo en el mundo de los videojuegos. Otros
-                                juegos como "Okami" y "Ni no Kuni" también usan este estilo.</p>
+                            <h2 style="text-align: center;">Cel shaded</h2>
+                            <p>
+                                APLICA EFECTOS ESPECÍFICOS QUE SE PARECEN A LOS TRAZOS DEL DIBUJO TRADICIONAL. EL EFECTO
+                                CEL SHADED ES MUY RECONOCIBLE PORQUE LAS SOMBRAS SON CELULARES Y REDUCEN EL DETALLE A LA
+                                VEZ QUE AÑADEN PERSONALIDAD. UN GRAN EJEMPLO ES EL JUEGO "THE LEGEND OF ZELDA: THE WIND
+                                WAKER" EN GAMECUBE, QUE POPULARIZÓ ESTE ESTILO EN EL MUNDO DE LOS VIDEOJUEGOS. OTROS
+                                JUEGOS COMO "OKAMI" Y "NI NO KUNI" TAMBIÉN USAN ESTE ESTILO.
+                            </p>
+
                         </div>
                     </div>
 
@@ -893,17 +1264,18 @@
                         <img src="assets/img/1_Anime.jpg" alt="3" />
                         <h1>Anime</h1>
                         <div class="details">
-                            <h2>Anime</h2>
-                            <p>Como su nombre indica, este estilo toma inspiración en el anime japonés, y generalmente
-                                tiene líneas limpias, un colorido vívido y personajes con características faciales
-                                dramáticas. Los juegos como "Persona", "Nier: Automata" y "Xenoblade Chronicles" son un
-                                excelente ejemplo.</p>
+                            <h2 style="text-align: center;">Anime</h2>
+                            <p>COMO SU NOMBRE INDICA, ESTE ESTILO TOMA INSPIRACIÓN EN EL ANIME JAPONÉS, Y GENERALMENTE
+                                TIENE LÍNEAS LIMPIAS, UN COLORIDO VÍVIDO Y PERSONAJES CON CARACTERÍSTICAS FACIALES
+                                DRAMÁTICAS. LOS JUEGOS COMO "PERSONA", "NIER: AUTOMATA" Y
+                                "XENOBLADE CHRONICLES" SON UN EXCELENTE EJEMPLO.</p>
+
                         </div>
                     </div>
 
                 </div>
             </section>
-        </section>
+        </div>
 
 
 
@@ -998,13 +1370,14 @@
                         </div>
 
                     </div>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+
+
                 </div>
-
-
-
-
-
-
 
 
 
@@ -1015,6 +1388,68 @@
         </section>
 
 
+        <div class="loco ">
+
+            <div class="card delay">
+                <a href="funda.html">
+                    <div class="personaje">
+                        <div class="imagen_personaje"></div>
+                        <div class="detalle">
+                            <h2 style="color: #fff;">Capitulo 1</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card delay">
+                <a href="pla.html">
+                    <div class="personaje_2">
+                        <div class="imagen_personaje_2"></div>
+                        <div class="detalle_2">
+                            <h2 style="color: #fff;">Capitulo 2</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card delay">
+                <a href="dise.html">
+                    <div class="personaje_3">
+                        <div class="imagen_personaje_3"></div>
+                        <div class="detalle_3">
+                            <h2 style="color: #fff;">Capitulo 3</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card delay">
+                <a href="tec.html">
+                    <div class="personaje_3">
+                        <div class="imagen_personaje_3"></div>
+                        <div class="detalle_3">
+                            <h2 style="color: #fff;">Capitulo 4</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card delay">
+                <a href="mon.html">
+                    <div class="personaje_3">
+                        <div class="imagen_personaje_3"></div>
+                        <div class="detalle_3">
+                            <h2 style="color: #fff;">Capitulo 5</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
 
 
     </main>
@@ -1024,6 +1459,7 @@
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line scrollup__icon"></i>
     </a>
+
     <!-- Agrega la etiqueta de script para la biblioteca ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -1094,6 +1530,38 @@
                 $(this).addClass("active");
             });
         });
+
+
+
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Muestra el botón cuando se hace scroll hacia abajo
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Vuelve arriba al hacer clic en el botón
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para otros navegadores
+        });
+
+    </script>
+    <script>
+
+        function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
     </script>
 
 

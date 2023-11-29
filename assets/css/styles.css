@@ -1539,7 +1539,9 @@ input {
 :is(.course, .blog) .section-title { margin-block-end: 40px; }
 
 
-
+img{
+  cursor: pointer;
+}
 
 
 
@@ -1691,3 +1693,4 @@ input {
 
   }
 }
+
