@@ -22,7 +22,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 99999;
             left: 0;
             top: 0;
             width: 100%;
@@ -107,7 +107,7 @@
     <main class="main">
         <!--==================== HOME ====================-->
         <section class="home" id="home">
-            <img src="assets/img/Portada.jpg" alt="" class="home__img">
+            <img src="assets/img/ep1m.PNG" alt="" class="home__img">
 
             <div class="home__container container grid">
                 <div class="home__data">
@@ -130,6 +130,7 @@
 
             </div>
         </section>
+        
 
         <!--==================== ABOUT ====================-->
         <section class="about section" id="Proyecto">
@@ -265,7 +266,7 @@
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="mon.html">
-                                        <h2 class="u"><b><span style="font-size:19px;">5.</span>MONTAJE DE AMBIENTES EN
+                                        <h2 class="u"><b><span style="font-size:19px;">5. </span>MONTAJE DE AMBIENTES EN
                                                 UNREAL ENGINE</b></h2>
                                     </a><br>
                                 </p>
@@ -277,7 +278,7 @@
                         <div class="blog-card blog-item">
                             <a href="ref.html">
                                 <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                    <img src="assets/img/PORTADA.png" width="370" height="370" loading="lazy"
+                                    <img src="assets/img/3_articulos.jpg" width="370" height="370" loading="lazy"
                                         alt="Become A Better Blogger: Content Planning" class="img-cover">
                                 </figure>
                             </a>
@@ -285,7 +286,7 @@
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="ref.html">
-                                        <h2 class="u"><b><span style="font-size:19px;">6.</span>RECURSOS Y REFERENCIAS</b></h2>
+                                        <h2 class="u"><b><span style="font-size:19px;">6. </span>RECURSOS Y REFERENCIAS</b></h2>
                                     </a><br>
                                 </p>
                             </div>
@@ -314,28 +315,23 @@
                 <div class="swiper-wrapper">
                     <!--==================== DISCOVER 1 ====================-->
                     <div class="discover__card swiper-slide">
-                        <img src="assets/img/NELA.PNG" alt="" class="discover__img">
-                        <div class="discover__data">
-                            <h2 class="discover__title">EN PROCESO</h2>
-                            <span class="discover__description">EN PROCESO</span>
-                        </div>
+                        <img width="100%"  height="300px" src="assets/img/ep1m.PNG"  onclick="openModal('assets/img/ep1m.PNG')" alt="" class="discover__img">
+                        
                     </div>
 
                     <!--==================== DISCOVER 2 ====================-->
                     <div class="discover__card swiper-slide">
-                        <img src="assets/img/NELA.PNG" alt="" class="discover__img">
+                        <img src="assets/img/ep2.png" onclick="openModal('assets/img/ep2.png')" alt="" class="discover__img">
                         <div class="discover__data">
-                            <h2 class="discover__title">EN PROCESO</h2>
-                            <span class="discover__description">EN PROCESO</span>
+                            
                         </div>
                     </div>
 
                     <!--==================== DISCOVER 3 ====================-->
                     <div class="discover__card swiper-slide">
-                        <img src="assets/img/NELA.PNG" alt="" class="discover__img">
+                        <img src="assets/img/ep3.png"  onclick="openModal('assets/img/ep3.png')" alt="" class="discover__img">
                         <div class="discover__data">
-                            <h2 class="discover__title">EN PROCESO</h2>
-                            <span class="discover__description">EN PROCESO</span>
+                            
                         </div>
 
 
@@ -343,12 +339,60 @@
 
                     <!--==================== DISCOVER 4 ====================-->
                     <div class="discover__card swiper-slide">
-                        <img src="assets/img/NELA.PNG" alt="" class="discover__img">
+                        <img src="assets/img/ep4.png" onclick="openModal('assets/img/ep4.png')" alt="" class="discover__img">
                         <div class="discover__data">
-                            <h2 class="discover__title">EN PROCESO</h2>
-                            <span class="discover__description">EN PROCESO</span>
+                            
                         </div>
                     </div>
+
+                      <!--==================== DISCOVER 5 ====================-->
+                      <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep5.png" onclick="openModal('assets/img/ep5.png')" alt="" class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+
+                      <!--==================== DISCOVER 6 ====================-->
+                      <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep6.png" onclick="openModal('assets/img/ep6.png')"  alt="" class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+
+                    
+                      <!--==================== DISCOVER 7 ====================-->
+                      <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep7.png" onclick="openModal('assets/img/ep7.png')"  alt="" class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+
+                     <!--==================== DISCOVER 8 ====================-->
+                     <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep8.png" onclick="openModal('assets/img/ep8.png')"  alt="" class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+
+                      <!--==================== DISCOVER 9 ====================-->
+                      <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep9.png" onclick="openModal('assets/img/ep9.png')"  alt="" class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+                     <!--==================== DISCOVER 10 ====================-->
+                     <div class="discover__card swiper-slide">
+                        <img src="assets/img/ep10.png" alt="" onclick="openModal('assets/img/ep10.png')"  class="discover__img">
+                        <div class="discover__data">
+                            
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -359,9 +403,7 @@
             <h2 class="section__title">Video</h2>
 
             <div class="video__container container">
-                <p class="video__description">Find out more with our video of the most beautiful and
-                    pleasant places for you and your family.
-                </p>
+              
 
                 <div class="video__content">
                     <video id="video-file">
@@ -411,7 +453,16 @@
         
     </script>
 
-    <script></script>
+    <script>
+          function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
 
 </body>
 

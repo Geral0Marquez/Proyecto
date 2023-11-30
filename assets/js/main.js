@@ -50,6 +50,7 @@ let swiper = new Swiper(".discover__container", {
     coverflowEffect: {
         rotate: 0,
     },
+    
     autoplay: {
         delay: 3000, // ajusta el tiempo en milisegundos entre cada slide
         disableOnInteraction: false, // para que no se detenga al interactuar con el carrusel
@@ -178,3 +179,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
