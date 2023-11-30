@@ -843,7 +843,7 @@
         }
 
 
-    
+
         footer .wave#wave1 {
             z-index: 1000;
             opacity: 1;
@@ -871,6 +871,106 @@
         .zoom li a:hover {
             transform: scale(1.1);
         }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -878,10 +978,14 @@
 
 
     <main class="main">
+        <button id="scrollToTopBtn" title="Volver arriba"><a style="color: white;" href="index.html"><i
+                    class="ri-home-2-line"></i></a></button>
 
         <h1 class=" fundamentos-title title">PREPARACIÓN Y PLANIFICACIÓN <br> </h1>
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
+            <button id="scrollToTopBtn" title="Volver arriba"><a style="color: white;" href="index.html"><i
+                        class="ri-home-2-line"></i></a></button>
 
 
 
@@ -905,7 +1009,7 @@
                 </div>
 
                 <div class="image-column delaySmall">
-                    <img src="assets/img/PREPARACIÓN Y PLANIFICACIÓN.png" alt="" class="about__img-onea">
+                    <img src="assets/img/PREPARACIÓN Y PLANIFICACIÓN.png" onclick="openModal('assets/img/PREPARACIÓN Y PLANIFICACIÓN.png')" alt="" class="about__img-onea">
 
                 </div>
             </div>
@@ -974,10 +1078,10 @@
 
                     <div class="image-column delaySmall ">
 
-                        <img src="assets/img/los.jpg" alt="" class="about__img-onea">
+                        <img src="assets/img/los.jpg" alt="" onclick="openModal('assets/img/los.jpg')" class="about__img-onea">
                         <p class="about__description"
                             style="text-align: center; text-decoration: underline; padding-top: 5%;">
-                            <a href="https://www.artstation.com/artwork/6NQ8xO" target="_blank">ArtStation - Arancia,
+                            <a href="https://www.artstation.com/artwork/6NQ8xO"  target="_blank">ArtStation - Arancia,
                                 Keira Santoso</a>
                         </p>
 
@@ -995,7 +1099,7 @@
         <section class="slider-container ">
             <div class="slider-images ">
                 <div class="slider-img  swiper-slide " style="opacity: 0.9;">
-                    <img src="assets/img/2_Tono.jpg" alt="1" />
+                    <img src="assets/img/2_Tono.jpg"  alt="1" />
                     <h1 style="font-size: 16px;"> EL tono</h1>
                     <div class="details">
                         <h2> El tono</h2>
@@ -1055,6 +1159,12 @@
 
         </div>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
 
         <div class="about__container container grid " style="gap: 50px;">
             <div class=" about__data animated">
@@ -1068,7 +1178,7 @@
 
                 </p>
 
-                <img src="assets/img/kevin-gnutzmans-1.jpg" alt="" class="about__img-onew animar">
+                <img src="assets/img/kevin-gnutzmans-1.jpg"  alt="" onclick="openModal('assets/img/kevin-gnutzmans-1.jpg')" class="about__img-onew animar">
                 <p class="about__description animar" style="text-align: left; text-decoration: underline;">
                     <a href="https://www.artstation.com/artwork/aGRRJk" target="_blank">ArtStation - League of
                         Legends X Arcane, Kevin Gnutzmans</a>
@@ -1128,7 +1238,7 @@
 
             <div class="img-a animar">
                 <div class="about__img-overlay sola">
-                    <img src="assets/img/lt.PNG" alt="" class="about__img-one"><br><br>
+                    <img src="assets/img/lt.PNG" onclick="openModal('assets/img/lt.PNG')" alt="" class="about__img-one"><br><br>
                     <p class="about__description" style="text-align: center; text-decoration: underline;">
                         <a href="https://www.artstation.com/artwork/DvlwG0" target="_blank">ArtStation - The Iris
                             Den, Keira Santoso</a>
@@ -1140,7 +1250,7 @@
             <br><br>
             <br><br>
             <br><br>
-           
+
         </div>
 
 
@@ -1151,18 +1261,19 @@
             </div>
 
 
-          
+
 
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
+
                 <li><a href="funda.html">Capitulo 1</a></li>
                 <li><a href="pla.html">Capitulo 2</a></li>
                 <li><a href="dise.html">Capitulo 3</a></li>
                 <li><a href="tec.html">Capitulo 4</a></li>
                 <li><a href="mon.html">Capitulo 5</a></li>
+                <li><a href="mon.html">Capitulo 6</a></li>
             </ul>
 
-            
+
 
 
         </footer>
@@ -1184,8 +1295,21 @@
                 $(this).addClass("active");
             });
         });
+
+
+
     </script>
 
+
+
+    <script>
+        function scrollUp() {
+            const scrollUp = document.getElementById('scroll-up');
+            // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
+            if (this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+        }
+        window.addEventListener('scroll', scrollUp)
+    </script>
 
 
     <!--========== SCROLL UP ==========-->
@@ -1262,6 +1386,46 @@
                 $(this).addClass("active");
             });
         });
+    </script>
+    <script>
+
+        function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+
+
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Muestra el botón cuando se hace scroll hacia abajo
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Vuelve arriba al hacer clic en el botón
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para otros navegadores
+        });
+
+        function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
     </script>
 
 

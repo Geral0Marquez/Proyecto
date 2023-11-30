@@ -17,19 +17,61 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>Escenarios Estilizados en Videojuegos</title>
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <header class="header" id="header">
         <nav class="nav container">
 
-            <div style="width: 70px; height: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black;">
+            <div
+                style="width: 70px; height: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black;">
                 <img src="assets/img/LogoB.png" alt="Logo de la empresa" style="max-width: 100%; max-height: 100%;">
                 <!-- O, si el nombre del logo es solo texto: -->
                 <!-- <span style="font-weight: bold;">Nombre del Logo</span> -->
             </div>
-          
-           
+
+
+
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -68,35 +110,24 @@
             <img src="assets/img/Portada.jpg" alt="" class="home__img">
 
             <div class="home__container container grid">
-                <div  class="home__data" >
+                <div class="home__data">
 
                     <h5 class="home__data-title" style=" text-shadow: 2px  0px 0px black,
                     0px  2px 0px black,
                    -2px  0px 0px black,
                     0px -2px 0px black;"><b>GUÍA DE BUENAS PRÁCTICAS PARA EL DISEÑO DE<br>ESCENARIOS ESTILIZADOS
                             EN VIDEOJUEGOS</b></h5>
-                    
-                    <span class="home__data-subtitle"  style="text-shadow: 1.5px  0px 0px black,
+
+                    <span class="home__data-subtitle" style="text-shadow: 1.5px  0px 0px black,
                     0px  1.5px 0px black,
                    -1.5px  0px 0px black,
                     0px -1.5px 0px black; ">CONSEJOS Y TRUCOS PARA PRINCIPIANTES<br><br><br><br></span>
-                    
+
 
                 </div>
 
-                <div class="home__social">
-                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
-                        <i class="ri-facebook-box-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
-                        <i class="ri-twitter-fill"></i>
-                    </a>
-                </div>
 
-             
+
             </div>
         </section>
 
@@ -105,9 +136,9 @@
             <div class="about__container container grid">
                 <div class="about__data">
                     <p class="about__description"><em><b>“En el mundo de los videojuegos, la magia no solo reside en las
-                        historias que se cuentan,
-                        sino también en los mundos que se exploran.”</b></em>
-</p>
+                                historias que se cuentan,
+                                sino también en los mundos que se exploran.”</b></em>
+                    </p>
 
                     <p class="about__description">Esta guía se adentrará en el fascinante mundo del diseño de escenarios
                         estilizados en tres dimensiones, donde la creatividad y la imaginación se unen para dar vida a
@@ -127,11 +158,11 @@
 
                 <div class="about__img">
                     <div class="about__img-overlay">
-                        <img src="assets/img/Introduccion_1.jpg" alt="" class="about__img-one">
+                        <img src="assets/img/Introduccion_1.jpg" onclick="openModal('assets/img/Introduccion_1.jpg')" alt="" class="about__img-one">
                     </div>
 
                     <div class="about__img-overlay">
-                        <img src="assets/img/Introduccion_2.jpg" alt="" class="about__img-two">
+                        <img src="assets/img/Introduccion_2.jpg" onclick="openModal('assets/img/Introduccion_2.jpg')" alt="" class="about__img-two">
                     </div>
                 </div>
             </div>
@@ -140,60 +171,63 @@
         <!--AQUI-->
         <section class="section blog has-bg-image blog-section" id="tema" aria-label="blog">
             <div class="container animate-fadeInUp">
-        
+
                 <h2 class="section__title">Capítulos</h2>
                 <ul class="grid-list">
-        
+
                     <li>
-                        <div class="blog-card blog-item" >
-                            <a  href="funda.html">
-                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                <img src="assets/img/TemaPortada_1.jpg" width="370" height="370" loading="lazy"
-                                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                            </figure>
+                        <div class="blog-card blog-item">
+                            <a href="funda.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/TemaPortada_1.jpg" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
                             </a>
-        
+
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="funda.html">
-                                        <h2 class="u "><b><span style="font-size:19px;">1.</span> FUNDAMENTOS DEL ARTE ESTILIZADO</b></h2>
+                                        <h2 class="u "><b><span style="font-size:19px;">1.</span> FUNDAMENTOS DEL ARTE
+                                                ESTILIZADO</b></h2>
                                     </a><br>
                                 </p>
                             </div>
                         </div>
                     </li>
-        
+
                     <li>
                         <div class="blog-card blog-item">
-                            <a  href="pla.html">
-                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                <img src="assets/img/TemaPortada_2.jpg" width="370" height="370" loading="lazy"
-                                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                            </figure>
+                            <a href="pla.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/TemaPortada_2.jpg" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
                             </a>
-        
+
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="pla.html">
-                                        <h2 class="u "><b><span style="font-size:19px;">2.</span> PREPARACIÓN Y PLANIFICACIÓN</b></h2>
+                                        <h2 class="u "><b><span style="font-size:19px;">2.</span> PREPARACIÓN Y
+                                                PLANIFICACIÓN</b></h2>
                                     </a><br>
                                 </p>
                             </div>
                         </div>
                     </li>
-        
+
                     <li>
                         <div class="blog-card blog-item">
-                            <a  href="dise.html">
-                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                <img src="assets/img/TemaPortada_3.jpg" width="370" height="370" loading="lazy"
-                                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                            </figure>
-                        </a>
+                            <a href="dise.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/TemaPortada_3.jpg" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
+                            </a>
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="dise.html">
-                                        <h2 class="u"><b><span style="font-size:19px;">3.</span> DISEÑO Y CREACIÓN DE ESCENARIOS ESTILIZADOS</b></h2>
+                                        <h2 class="u"><b><span style="font-size:19px;">3.</span> DISEÑO Y CREACIÓN DE
+                                                ESCENARIOS ESTILIZADOS</b></h2>
                                     </a><br>
                                 </p>
                             </div>
@@ -201,17 +235,18 @@
                     </li>
                     <li>
                         <div class="blog-card blog-item">
-                            <a  href="tec.html">
-                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                <img src="assets/img/TemaPortada_4.jpg" width="370" height="370" loading="lazy"
-                                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                            </figure>
+                            <a href="tec.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/TemaPortada_4.jpg" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
                             </a>
-        
+
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="tec.html">
-                                        <h2 class="u"><b><span style="font-size:19px;">4.</span> TÉCNICAS Y HERRAMIENTAS</b></h2>
+                                        <h2 class="u"><b><span style="font-size:19px;">4.</span> TÉCNICAS Y
+                                                HERRAMIENTAS</b></h2>
                                     </a><br>
                                 </p>
                             </div>
@@ -220,29 +255,56 @@
                     </li>
                     <li>
                         <div class="blog-card blog-item">
-                            <a  href="mon.html">
-                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                <img src="assets/img/PORTADA.png" width="370" height="370" loading="lazy"
-                                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                            </figure>
+                            <a href="mon.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/PORTADA.png" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
                             </a>
 
                             <div class="card-content">
                                 <p class="about__description">
                                     <a class="u zoomed-text" href="mon.html">
-                                        <h2 class="u"><b><span style="font-size:19px;">5.</span>MONTAJE DE AMBIENTES EN UNREAL ENGINE</b></h2>
+                                        <h2 class="u"><b><span style="font-size:19px;">5.</span>MONTAJE DE AMBIENTES EN
+                                                UNREAL ENGINE</b></h2>
                                     </a><br>
                                 </p>
                             </div>
-                            
+
                         </div>
                     </li>
-        
+                    <li>
+                        <div class="blog-card blog-item">
+                            <a href="ref.html">
+                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/PORTADA.png" width="370" height="370" loading="lazy"
+                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
+                                </figure>
+                            </a>
+
+                            <div class="card-content">
+                                <p class="about__description">
+                                    <a class="u zoomed-text" href="ref.html">
+                                        <h2 class="u"><b><span style="font-size:19px;">6.</span>RECURSOS Y REFERENCIAS</b></h2>
+                                    </a><br>
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
                 </ul>
-        
+
             </div>
         </section>
-        
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
 
         <!--==================== DISCOVER ====================-->
         <section class="discover section" id="galeria">
@@ -276,7 +338,7 @@
                             <span class="discover__description">EN PROCESO</span>
                         </div>
 
-                        
+
                     </div>
 
                     <!--==================== DISCOVER 4 ====================-->
@@ -290,7 +352,7 @@
                 </div>
             </div>
         </section>
-   
+
 
         <!--==================== VIDEO ====================-->
         <section class="video section">
@@ -306,7 +368,8 @@
                         <source src="assets/video/Intro (1) (online-video-cutter.com).mp4" type="video/mp4">
                     </video>
 
-                    <button style="background-color: black;" class="button button--flex video__button" id="video-button">
+                    <button style="background-color: black;" class="button button--flex video__button"
+                        id="video-button">
                         <i class="ri-play-line video__button-icon" id="video-icon"></i>
                     </button>
                 </div>
@@ -314,18 +377,18 @@
         </section>
 
 
-      
+
     </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
         <div class="footer__container container grid">
-            
+
 
             <div class="footer__rights">
                 <p class="footer__copy">&#169; 2023 sitio web creado por Geraldin Paola Palacio Márquez</p>
                 <div class="footer__terms">
-                    
+
                 </div>
             </div>
         </div>
@@ -343,8 +406,13 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-    
+    <script src="assets/js/main.js">
+
+        
+    </script>
+
+    <script></script>
+
 </body>
 
 </html>

@@ -416,7 +416,7 @@
 
 
 
-        
+
         footer {
             position: relative;
             width: 100%;
@@ -479,35 +479,7 @@
         }
 
 
-        footer .wave {
-            position: absolute;
-            top: -100px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: #fff url(wave1.png);
-            background-size: 1000px 100px;
-
-        }
-
-        footer .wave#wave1 {
-            z-index: 1000;
-            opacity: 1;
-            bottom: 0;
-            animation: animatewave 3s linear infinite;
-        }
-
-
-        @keyframes animatewave {
-            0% {
-                background-position-x: 0px;
-            }
-
-            100% {
-                background-position-x: 1000px;
-            }
-
-        }
+   
 
 
         .zoom li a {
@@ -517,6 +489,273 @@
         .zoom li a:hover {
             transform: scale(1.1);
         }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background: #0b0f15;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social_icon,
+        footer .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        footer .social_icon li,
+        footer .menu li {
+            list-style: none;
+        }
+
+        footer .social_icon li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        footer .social_icon li a {
+            transform: translateY(-10px);
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+
+            opacity: 1;
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+
+
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+         /* texto y boton */
+        /* ... */
+
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -524,6 +763,9 @@
 
 
     <main class="main">
+        <button id="scrollToTopBtn" title="Volver arriba"><a style="color: white;" href="index.html"><i
+            class="ri-home-2-line"></i></a></button>
+
 
         <h1 class=" fundamentos-title title">DISEÑO Y CREACIÓN DE ESCENARIOS ESTILIZADOS<br> </h1>
         <!--==================== ABOUT ====================-->
@@ -554,7 +796,7 @@
                 </div>
 
                 <div class="image-column delayMedium">
-                    <img src="assets/img/keira-santoso-clockwork-cafe-001.jpg" alt="" class="about__img-onea">
+                    <img src="assets/img/keira-santoso-clockwork-cafe-001.jpg" alt="" onclick="openModal('assets/img/keira-santoso-clockwork-cafe-001.jpg')" class="about__img-onea">
                     <p class="about__description" style="text-align: center; text-decoration: underline;">
                         <a href="https://www.artstation.com/artwork/DvlwG0" target="_blank">ArtStation - The Iris Den,
                             Keira Santoso</a>
@@ -636,8 +878,9 @@
 
             <!-- button prev and next -->
             <div class="buttons">
-                <button id="prev"><</button>
-                <button id="next">></button>
+                <button id="prev"><
+                    </button>
+                        <button id="next">></button>
             </div>
 
             <ul class="dots">
@@ -696,7 +939,7 @@
         <div class="about__container container grid   " style="gap: 50px;">
             <div class="image-columns animar">
                 <br>
-                <img src="assets/img/3_ProxyPhase_Corregido.jpg" alt="" class="about__img-onep">
+                <img src="assets/img/3_ProxyPhase_Corregido.jpg" onclick="openModal('assets/img/3_ProxyPhase_Corregido.jpg')" alt="" class="about__img-onep">
 
             </div>
             <div class=" about__data animated">
@@ -719,12 +962,21 @@
 
 
 
+
         </div>
+
+
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
 
         <div class="about__container container grid  animar" style="gap: 50px;">
             <div class="image-columns ">
                 <br>
-                <img src="assets/img/3_ProxyPhase_2.png" alt="" class="about__img-onep">
+                <img src="assets/img/3_ProxyPhase_2.png" onclick="openModal('assets/img/3_ProxyPhase_2.png')" alt="" class="about__img-onep">
 
             </div>
             <div class=" about__data animated">
@@ -754,7 +1006,7 @@
         <div class="about__container container grid  " style="gap: 50px;">
             <div class="image-columns animar ">
                 <br>
-                <img src="assets/img/3_ProxyPhase_3.png" alt="" class="about__img-onep">
+                <img src="assets/img/3_ProxyPhase_3.png" onclick="openModal('assets/img/3_ProxyPhase_3.png')" alt="" class="about__img-onep">
 
             </div>
             <div class=" about__data animated    delaySmall">
@@ -819,13 +1071,10 @@
                 </div>
                 <br><br>
                 <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
+                
+               
             </div>
         </section>
-
 
 
 
@@ -837,31 +1086,22 @@
             </div>
 
 
-          
+
 
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
+
                 <li><a href="funda.html">Capitulo 1</a></li>
                 <li><a href="pla.html">Capitulo 2</a></li>
                 <li><a href="dise.html">Capitulo 3</a></li>
                 <li><a href="tec.html">Capitulo 4</a></li>
                 <li><a href="mon.html">Capitulo 5</a></li>
+                <li><a href="mon.html">Capitulo 6</a></li>
             </ul>
 
-            <p>© 2023 Geraldin Marquez | Todos los derechos reservados</p>
+
 
 
         </footer>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -954,6 +1194,33 @@
             if (this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
         }
         window.addEventListener('scroll', scrollUp)
+
+        
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Muestra el botón cuando se hace scroll hacia abajo
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Vuelve arriba al hacer clic en el botón
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para otros navegadores
+        });
+        
+        function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
     </script>
 
 
@@ -1014,6 +1281,8 @@
             })
 
         })
+
+        
 
 
     </script>

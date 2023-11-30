@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/oks.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- En el head de tu HTML -->
+
+
+
+    <title>RECURSOS Y REFERENCIAS</title>
+    <style>
+        /* Estilos para el título "FUNDAMENTOS DEL ARTE ESTILIZADO" */
+        .fundamentos-title {
+            text-align: center;
+            font-weight: bold;
+            padding-top: 5%;
+            padding-bottom: 20px;
+            /* Puedes ajustar el valor según tus necesidades */
+            color: #0d0e0e;
+            /* Puedes ajustar el color del texto según tus necesidades */
+        }
+
+        /* Estilos para el título "Introducción" */
+        .introduccion-title {
+            text-align: center;
+            padding-bottom: 10px;
+            /* Puedes ajustar el valor según tus necesidades */
+            color: #ff6600;
+            /* Puedes ajustar el color del texto según tus necesidades */
+        }
+
+        .two-column-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            flex-basis: calc(70% - 10px);
+            /* 50% del ancho total, menos el espacio entre columnas */
+        }
+
+        .image-column {
+            flex-basis: calc(30% - 10px);
+            /* 50% del ancho total, menos el espacio entre columnas */
+        }
+
+        .two-column-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+        }
+
+        .sol img {
+            max-width: 310px;
+            width: 100%;
+            height: 510px;
+        }
+
+        .sola img {
+            max-width: 400px;
+            width: 100%;
+            height: 404px;
+        }
+
+        .sa {
+            width: 100vw;
+            /* Ancho completo de la ventana */
+            height: 100vh;
+            /* Altura completa de la ventana */
+            overflow: hidden;
+            /* Para asegurarse de que la imagen no cree desplazamiento */
+        }
+
+        .about__img-onea {
+            width: 100%;
+            /* Ajusta el porcentaje según tu preferencia */
+            /* La altura se ajusta automáticamente para mantener las proporciones */
+            display: block;
+            height: 279px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about__img-onew {
+            width: 428px;
+            /* Ajusta el porcentaje según tu preferencia */
+            /* La altura se ajusta automáticamente para mantener las proporciones */
+            display: block;
+            max-height: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        .about__img-onep {
+
+            /* Ajusta el porcentaje según tu preferencia */
+            /* La altura se ajusta automáticamente para mantener las proporciones */
+            display: block;
+            max-height: 300px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin: 0 auto;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Dos columnas iguales */
+            gap: 20px;
+            /* Espacio entre las columnas */
+        }
+
+        .por {
+            grid-column: span 2;
+            /* Ocupa dos columnas completas */
+        }
+
+        @media screen and (max-width: 600px) {
+            .two-column-container {
+                flex-direction: column;
+                /* Cambia la dirección de las columnas a vertical en dispositivos pequeños */
+            }
+
+            .text-column,
+            .image-column {
+                flex-basis: 100%;
+                /* Ocupa el 100% del ancho en dispositivos pequeños */
+            }
+        }
+
+        /* Espaciado entre la imagen y el texto en dispositivos más grandes */
+        @media screen and (min-width: 601px) {
+            .grid-container {
+                gap: 50px;
+                /* Ajusta el espacio entre la imagen y el texto según sea necesario */
+            }
+        }
+
+        /* Media query para dispositivos pequeños */
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                /* Una sola columna en dispositivos móviles */
+            }
+
+            .image-column {
+                order: 1;
+                /* Cambia el orden para que la imagen esté debajo del texto en dispositivos móviles */
+            }
+
+
+
+
+            .text-column {
+                order: 2;
+                /* Cambia el orden para que el texto esté encima de la imagen en dispositivos móviles */
+            }
+        }
+
+
+        @media screen and (min-width: 100px) and (max-width: 768px) {
+
+
+            .image-columns {
+                order: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+
+
+        /* Agrega estos estilos para centrar la imagen y limitar su ancho */
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 970px;
+            max-height: 250px;
+            /* Puedes ajustar este valor según sea necesario */
+            margin: 0 auto;
+            /* Esto centra la imagen horizontalmente */
+        }
+
+
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* Ajusta la altura según sea necesario */
+            background-image: url('assets/img/old.PNG');
+            /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            /* Color del texto */
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .background-container,
+        .background-container-1,
+        .about__img-onep,
+        .ger {
+            transition: var(--img-transition);
+        }
+
+        .background-container:hover,
+        .background-container-1:hover,
+        .about__img-onep:hover,
+        .ger:hover {
+            transform: var(--img-scale);
+        }
+
+        .background-container-1 {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* Ajusta la altura según sea necesario */
+            background-image: url('assets/img/about2.jpg');
+            /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            /* Color del texto */
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+        }
+
+        .text-container {
+            z-index: 1;
+            max-width: 80%;
+            /* Ajusta el ancho del texto según sea necesario */
+            grid-column: 2 / span 1;
+            /* Ocupa la primera columna en el grid */
+            align-self: center;
+            text-align: center;
+        }
+
+        .text-container-1 {
+            z-index: 1;
+            max-width: 80%;
+            /* Ajusta el ancho del texto según sea necesario */
+            grid-column: 1 / span 1;
+            /* Ocupa la primera columna en el grid */
+            align-self: center;
+            text-align: center;
+            margin-left: 70px;
+
+        }
+
+        .text-container,
+        .text-container-1 {
+            font-size: 16px;
+            /* Tamaño base */
+
+            /* Media query para pantallas de 200px hasta 400px */
+            @media screen and (min-width: 200px) and (max-width: 400px) {
+                font-size: 7px;
+                /* Tamaño para pantallas más pequeñas */
+
+                .por {
+                    font-size: 12px;
+                }
+
+            }
+
+            /* Media query para pantallas de 600px hasta 1438px */
+            @media screen and (min-width: 389px) and (max-width: 576px) {
+                font-size: 8px;
+
+                .por {
+                    font-size: 14px;
+                }
+
+            }
+
+            /* Media query para pantallas de 600px hasta 1438px */
+            @media screen and (min-width: 577px) and (max-width: 1438px) {
+                font-size: 10px;
+
+
+            }
+
+
+            @media screen and (min-width: 1000px) {
+                margin-left: 96px;
+                margin-right: 79px;
+                /* Agrega un margen izquierdo para pantallas medianas */
+            }
+
+
+
+
+
+        }
+
+
+
+        .discover__card img {
+            height: 300px;
+        }
+
+
+
+
+        .slider {
+            width: 800px;
+            max-width: 100vw;
+            height: 400px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            width: max-content;
+            transition: 1s;
+        }
+
+
+        .list img {
+            width: 800px;
+            max-width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff5;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+        }
+
+
+        .dots {
+            position: absolute;
+            bottom: 10px;
+            color: #fff;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .dots li {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+
+        .dots li.active {
+            width: 30px;
+        }
+
+        .buttons button:hover,
+        .dots li:hover {
+            background-color: black;
+            color: white;
+            /* Cambiar el color del texto si es necesario */
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .slider {
+                height: 400px;
+            }
+        }
+
+
+
+
+        footer {
+            position: relative;
+            width: 100%;
+            background: #3586ff;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social_icon,
+        footer .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        footer .social_icon li,
+        footer .menu li {
+            list-style: none;
+        }
+
+        footer .social_icon li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        footer .social_icon li a {
+            transform: translateY(-10px);
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+
+            opacity: 1;
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+
+   
+
+
+        .zoom li a {
+            transition: 1s;
+        }
+
+        .zoom li a:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            position: absolute;
+            width: 100%;
+            background: #0b0f15;
+            background: #0b0f15;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social_icon,
+        footer .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        footer .social_icon li,
+        footer .menu li {
+            list-style: none;
+        }
+
+        footer .social_icon li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        footer .social_icon li a {
+            transform: translateY(-10px);
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+
+            opacity: 1;
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+
+
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+         /* texto y boton */
+        /* ... */
+
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(48, 46, 46);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #070808;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #1b1b1c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main class="main">
+        <button id="scrollToTopBtn" title="Volver arriba"><a style="color: white;" href="index.html"><i
+            class="ri-home-2-line"></i></a></button>
+
+
+        <h1 class=" fundamentos-title title">RECURSOS Y REFERENCIAS<br> </h1>
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+
+
+            <div class=" about__data container">
+    
+                <p class="about__description delayLargeTopExtra">
+                    En este mundo de la creación de otras realidades, la búsqueda de inspiración y recursos de calidad desempeña un papel fundamental. En esta sección, titulada 'Recursos y Referencias', se erige como un punto de encuentro para artistas y creadores ávidos de nutrir su imaginación y perfeccionar sus habilidades.
+                    <br><br>
+    
+                    Recursos para la creacion de este proyecto:
+    
+                </p>
+    
+    
+    
+                </p>
+    
+    
+    
+            </div>
+
+
+            
+
+        <!--==================== DISCOVER ====================-->
+
+        <div class="slider animar">
+            <div class="list">
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_1.png">
+                </div>
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_2.png">
+                </div>
+                <div class="item">
+                    <img src="assets/img/Slide_BLOCKOUT_3.png">
+                </div>
+            </div>
+
+
+            <!-- button prev and next -->
+            <div class="buttons">
+                <button id="prev"><
+                    </button>
+                        <button id="next">></button>
+            </div>
+
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div class="about__container container grid   " style="gap: 50px;">
+
+            <h2 class="por  animar "  style="text-align: center; font-size: 29px;"><br><br><br><br>Articulos</h2>
+            <div class="image-columns animar">
+             
+                <br>
+                <img src="assets/img/1_articulos.jpeg" onclick="openModal('assets/img/1_articulos.jpeg')" alt="" class="about__img-onep">
+
+            </div>
+            <div class=" about__data animated">
+                <p class="about__description">
+                <h2 class="por  animar" style="text-decoration: underline;" ><a  href="https://80.lv/articles/learn-how-to-create-a-xvi-century-building-using-unreal-engine-5/">Learn How To Create a XVI 
+                    Century Building Using Unreal Engine 5</a></h2>
+
+
+                <p class="delaySmall" style="text-align: justify; margin-bottom: 5%;  ">Michał Zieliński ha compartido el proyecto "Érase una vez en Hamburgo", discutiendo la configuración de la composición, texturas e iluminación, además de proporcionar información sobre cómo se renderizó el proyecto en UE5.</p>
+                </p>
+
+            </div>
+
+
+
+
+        </div>
+
+
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+
+        <div class="about__container container grid  animar" style="gap: 50px;">
+            <div class="image-columns ">
+                <br>
+                <img src="assets/img/2_articulos.jpg" onclick="openModal('assets/img/2_articulos.jpg')" alt="" class="about__img-onep">
+
+            </div>
+            <div class=" about__data animated">
+                <p class="about__description">
+                    <h2 class="por  animar" style="text-decoration: underline;" ><a  href="https://80.lv/articles/have-a-look-at-this-stylized-island-learn-how-it-was-made-in-unreal-engine/">Have a Look at This Stylized Island & Learn How It Was Made in Unreal Engine</a></h2>
+    
+    
+                    <p class="delaySmall" style="text-align: justify; margin-bottom: 5%;  ">Lang Ma nos ha compartido la primera experiencia del artista al crear plantas estilizadas y nos ha guiado a través de las etapas de creación de la isla estilizada en Unreal Engine.</p>
+                    </p>
+    
+               
+
+            </div>
+
+
+
+        </div>
+
+        <div class="about__container container grid  animar" style="gap: 50px;">
+            <div class="image-columns ">
+                <br>
+                <img src="assets/img/3_articulos.jpg" onclick="openModal('assets/img/3_articulos.jpg')" alt="" class="about__img-onep">
+
+            </div>
+            <div class=" about__data animated">
+                <p class="about__description">
+                    <h2 class="por  animar" style="text-decoration: underline;" ><a  href="https://80.lv/articles/creating-a-stylized-chaparral-environment-in-ue4/">Creating a Stylized Chaparral Environment</a></h2>
+    
+    
+                    <p class="delaySmall" style="text-align: justify; margin-bottom: 5%;  ">Marie Lazar compartió un análisis detallado de su escena orgánica estilizada, donde se discute la creación de vegetación y rocas, la configuración de iluminación, efectos visuales y presentación.</p>
+                    </p>
+    
+               
+
+            </div>
+
+            
+           
+
+
+
+        </div>
+        <div class="about__container container grid  animar" style="gap: 50px;">
+            <div class="image-columns ">
+                <br>
+                <img src="assets/img/4_articulos.jpg" onclick="openModal('assets/img/4_articulos.jpg')" alt="" class="about__img-onep">
+
+            </div>
+            <div class=" about__data animated">
+                <p class="about__description">
+                    <h2 class="por  animar" style="text-decoration: underline;" ><a  href="https://80.lv/articles/creating-a-stylized-medieval-town-in-3ds-max-substance-unreal/">Creating a Stylized Medieval Town in 3ds Max, Substance & Unreal</a></h2>
+    
+    
+                    <p class="delaySmall" style="text-align: justify; margin-bottom: 5%;  ">Silke Van Der Smissen compartió un detallado desglose del proyecto de la Aldea Medieval Estilizada, nos mostró el flujo de trabajo en Unreal y explicó cómo es posible crear un entorno atractivo dentro de restricciones de tiempo.</p>
+                    </p>
+    
+               
+
+            </div>
+
+            
+           <br>     
+           <br>
+           <br>     
+           <br>
+           <br>     
+           <br>
+           <br>     
+           <br>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+            </div>
+
+
+
+
+            <ul class="menu">
+
+                <li><a href="funda.html">Capitulo 1</a></li>
+                <li><a href="pla.html">Capitulo 2</a></li>
+                <li><a href="dise.html">Capitulo 3</a></li>
+                <li><a href="tec.html">Capitulo 4</a></li>
+                <li><a href="mon.html">Capitulo 5</a></li>
+                <li><a href="mon.html">Capitulo 6</a></li>
+            </ul>
+
+
+
+
+        </footer>
+
+
+
+
+
+
+
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let swiper = new Swiper(".discover__container", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                spaceBetween: 32,
+                coverflowEffect: {
+                    rotate: 0,
+                },
+            });
+        });
+
+
+
+    </script>
+
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+    <!-- Agrega la etiqueta de script para la biblioteca ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Usa este script para inicializar ScrollReveal -->
+    <script>
+        ScrollReveal().reveal('.animar', {
+            origin: 'left',
+            distance: '50px',
+            duration: 2000,
+            delay: 550
+        });
+
+
+        const scrollTop = ScrollReveal({
+            origin: 'top',
+            distance: '50px',
+            duration: 1000
+        });
+
+        scrollTop.reveal('.delaySmall', { delay: 600 });
+        scrollTop.reveal('.delayMedium', { delay: 500 });
+        scrollTop.reveal('.delayLarge', { delay: 700 });
+        scrollTop.reveal('.delayLargeTopExtra', { delay: 900 });
+
+
+        const scrollBottom = ScrollReveal({
+            origin: 'bottom',
+            distance: '50px',
+            duration: 2300
+        })
+
+        scrollBottom.reveal('.delaySmallBottom', { delay: 300 })
+        scrollBottom.reveal('.delayMediumBottom', { delay: 500 })
+        scrollBottom.reveal('.delayLargeBottom', { delay: 700 })
+        scrollBottom.reveal('.delayLargeBottomExtra', { delay: 900 })
+
+
+        const scrollRight = ScrollReveal({
+            origin: 'left',
+            distance: '-20px',
+            duration: 2200
+        })
+
+        scrollRight.reveal('.title', { delay: 550 })
+
+
+
+
+
+    </script>
+
+
+    <script>
+        function scrollUp() {
+            const scrollUp = document.getElementById('scroll-up');
+            // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
+            if (this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+        }
+        window.addEventListener('scroll', scrollUp)
+
+        
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Muestra el botón cuando se hace scroll hacia abajo
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Vuelve arriba al hacer clic en el botón
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para otros navegadores
+        });
+        
+        function openModal(imagePath) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+
+
+    <script src="assets/js/jQuery.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+        let list = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let dots = document.querySelectorAll('.slider .dots li');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+
+        let active = 0;
+        let lengthItems = items.length - 1;
+
+
+        next.onclick = function () {
+            if (active + 1 > lengthItems) {
+                active = 0;
+            } else {
+                active = active + 1;
+            }
+            reloadSlider();
+        }
+
+        prev.onclick = function () {
+            if (active - 1 < 0) {
+                active = lengthItems;
+            } else {
+                active = active - 1;
+            }
+            reloadSlider();
+        }
+
+        let refreshSlider = setInterval(() => { next.click() }, 5000);
+        function reloadSlider() {
+            let checkLeft = items[active].offsetLeft;
+            list.style.left = -checkLeft + 'px';
+
+            let lastActiveDot = document.querySelector('.slider .dots li.active');
+            lastActiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+            clearInterval(refreshSlider);
+            refreshSlider = setInterval(() => { next.click() }, 5000);
+        }
+
+        dots.forEach((Li, key) => {
+
+            Li.addEventListener('click', function () {
+                active = key;
+                reloadSlider();
+            })
+
+        })
+
+        
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
